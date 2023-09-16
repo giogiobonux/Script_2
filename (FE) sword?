@@ -572,12 +572,17 @@ local Axe = script:WaitForChild'Axe'
 Axe.Parent=Char
 Axe.PrimaryPart.Anchored=false
 local Hitbox = Axe:WaitForChild'Blade'
-local MeshPartAccessory = Character.MeshPartAccessory.Handle
-table.insert(Aligns, { MeshPartAccessory, Axe.Handle, CFrameAngles(90, 90, 90) })
 
 Axe.Handle.Transparency = 1
 Axe.Blade.Transparency = 1
 Axe.Strap.Transparency = 1
+
+local hat2 = gp(cplayer, "MeshPartAccessory", "Accessory")
+local handle2 = gp(hat2, "Handle", "BasePart")
+local att2 = gp(handle2, "att1_Handle", "Attachment")
+att2.Parent = Axe.Handle
+att2.Position = Vector3.new(-1, 0, 0)
+att2.Rotation = Vector3.new(90, 90, 90)
 
 local HueShift = {
 	[344016870]={H=.73,S=1,V=1};--.73;
