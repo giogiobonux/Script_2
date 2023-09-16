@@ -572,6 +572,8 @@ local Axe = script:WaitForChild'Axe'
 Axe.Parent=Char
 Axe.PrimaryPart.Anchored=false
 local Hitbox = Axe:WaitForChild'Blade'
+local MeshPartAccessory = Character.MeshPartAccessory.Handle
+table.insert(Aligns, { MeshPartAccessory, Axe.Handle, CFrameAngles(0, 0, 90) })
 
 Axe.Handle.Transparency = 1
 Axe.Blade.Transparency = 1
