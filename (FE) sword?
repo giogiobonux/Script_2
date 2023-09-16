@@ -1,15 +1,12 @@
--- Name: The Boys by Nebula_Zoroa (sorry if spelt wrong) --
--- Converted/Aligned: by Melon
--- USES EMPER'S REANIMATE, MADE BY EMPER
---[[
-https://www.roblox.com/catalog/5555611932/Fireaxe
-https://www.roblox.com/catalog/11159410305/Rectangle-Head-For-Headless
-https://www.roblox.com/catalog/11263254795/Dummy-Head-For-Headless
-https://www.roblox.com/catalog/12344545199/Extra-Left-hand-moving-Blocky-white
-https://www.roblox.com/catalog/12344591101/Extra-Right-hand-moving-Blocky-white
-https://www.roblox.com/catalog/14255528083/Torso-Extension
-]]--
+player = game.Players.LocalPlayer
+cplayer = player.Character
 
+for i,v in pairs (cplayer:GetChildren()) do
+	if v:IsA("Accessory") then
+		v.Handle.Massless = true
+		v.Handle.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+	end
+end
 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
