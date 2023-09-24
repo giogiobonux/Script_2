@@ -652,8 +652,6 @@ local Axe = script:WaitForChild'Axe'
 Axe.Parent=Char
 Axe.PrimaryPart.Anchored=false
 local Hitbox = Axe:WaitForChild'Blade'
-local FireaxeAccessory = Character.FireaxeAccessory.Handle
-table.insert(Aligns, { FireaxeAccessory, Axe.Handle, CFrameAngles(0, 0, 90) })
 
 Axe.Handle.Transparency = 1
 Axe.Blade.Transparency = 1
