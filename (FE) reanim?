@@ -76,7 +76,7 @@ local PostSimulation = game:FindFirstChildOfClass("RunService").PostSimulation
 
 local Character = LocalPlayer.Character
 local CharacterClone = Instancenew("Model")
-
+ 
 local StarterGui = game:FindFirstChildOfClass("StarterGui")
 local BindableEvent = Instancenew("BindableEvent")
 
@@ -91,7 +91,6 @@ local InputBegan = UserInputService.InputBegan:Connect(function(Input, GameProce
 	
 	if not GameProcessed and ( Type == MouseButton1 or Type == Touch ) then
 		local Target = Mouse.Target
-
 		if Target and not Target.Anchored and not Target:IsDescendantOf(CharacterClone) and not Target:IsDescendantOf(Character) and not tablefind(Fling, Target) then
 			local Parent = Target.Parent
 
@@ -152,6 +151,30 @@ local LeftLeg = Part("Left Leg", LimbSize)
 local RightLeg = Part("Right Leg", LimbSize)
 local HumanoidRootPart = Part("HumanoidRootPart", TorsoSize)
 
+local FakeRA = Instance.new("Part")
+FakeRA.Size = Vector3.new(1,2,1)
+FakeRA.Transparency = 1
+FakeRA.BrickColor = BrickColor.new("Institutional White")
+FakeRA.Parent = RightArm
+
+local FRAW = Instance.new("Weld")
+FRAW.Part0 = RightArm
+FRAW.Part1 = FakeRA
+FRAW.C0 = CFrame.new(0, 0, 0)
+FRAW.Parent = RightArm
+
+local FakeLA = Instance.new("Part")
+FakeLA.Size = Vector3.new(1,2,1)
+FakeLA.Transparency = 1
+FakeLA.BrickColor = BrickColor.new("Institutional White")
+FakeLA.Parent = LeftArm
+
+local FLAW = Instance.new("Weld")
+FLAW.Part0 = LeftArm
+FLAW.Part1 = FakeLA
+FLAW.C0 = CFrame.new(0, 0, 0)
+FLAW.Parent = LeftArm
+
 local Part = nil
 
 if Character then
@@ -184,13 +207,28 @@ face.Name = "face"
 face.Parent = Head
 
 local AccessoryTable = { 
+     -- Paid --
+	{ Mesh = "14241018198", Texture = "14251599953", Instance = Torso },
+	{ Mesh = "14255522247", Texture = "14255543546", Instance = RightArm, CFrame = CFrameAngles(0, 1.57, 1.57) },
+	{ Mesh = "14255522247", Texture = "14255543546", Instance = LeftArm, CFrame = CFrameAngles(0, - 1.57, 1.57) },
+	{ Mesh = "14768684979", Texture = "14768683674", Instance = RightLeg, CFrame = CFrameAngles(0, - 1.57, 1.57) },
+	{ Mesh = "14768684979", Texture = "14768683674", Instance = LeftLeg, CFrame = CFrameAngles(0, 1.57, 1.57) },
+	
+	-- Paid (2) --
+	{ Mesh = "14241018198", Texture = "14251599953", Instance = Torso },
 	{ Mesh = "12344206657", Texture = "12344206675", Instance = RightArm, CFrame = CFrameAngles(-115, 0, 0) },
 	{ Mesh = "12344207333", Texture = "12344207341", Instance = LeftArm, CFrame = CFrameAngles(-115, 0, 0) },
 	{ Mesh = "11159370334", Texture = "11159284657", Instance = RightLeg, CFrame = CFrameAngles(0, - 1.57, 1.57) },
 	{ Mesh = "11263221350", Texture = "11263219250", Instance = LeftLeg, CFrame = CFrameAngles(0, 1.57, 1.57) },
+	
+	-- Free --
+	{ Mesh = "4819720316", Texture = "4819722776", Instance = Torso, CFrame = CFrameAngles(0, 0, 105) },
+	{ Mesh = "3030546036", Texture = "3033903209", Instance = RightArm, CFrame = CFrameAngles(-90, 0, -89.5) },
+	{ Mesh = "3030546036", Texture = "3360978739", Instance = LeftArm, CFrame = CFrameAngles(-90, 0, 89.5) },
+	{ Mesh = "3030546036", Texture = "3409604993", Instance = RightLeg, CFrame = CFrameAngles(-90, 0, -89.5) },
+	{ Mesh = "3030546036", Texture = "3033898741", Instance = LeftLeg, CFrame = CFrameAngles(-90, 0, 89.5) },
+    
 }
-
-
 
 for _, Table in pairs(AccessoryTable) do
 	if type(Table.Mesh) ~= "string" then
