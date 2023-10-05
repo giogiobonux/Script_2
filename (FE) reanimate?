@@ -228,7 +228,7 @@ local AccessoryTable = {
 	{ Mesh = "3030546036", Texture = "3409604993", Instance = RightLeg, CFrame = CFrameAngles(-90, 0, -89.5) },
 	{ Mesh = "3030546036", Texture = "3033898741", Instance = LeftLeg, CFrame = CFrameAngles(-90, 0, 89.5) },
     
-    { Mesh = "4315410540", Texture = "4506940486", Instance = FakeLA, CFrame = CFramenew(0,-0.65,-2.60) * CFrameAngles(1, 1.50, 1.40)},
+    { Mesh = "4315410540", Texture = "4506940486", Instance = FakeRA, CFrame = CFramenew(0,-0.65,-2.60) * CFrameAngles(1, 1.50, 1.40)},
 }
 
 for _, Table in pairs(AccessoryTable) do
@@ -688,8 +688,8 @@ local Axe = script:WaitForChild'Axe'
 Axe.Parent=Char
 Axe.PrimaryPart.Anchored=false
 local Hitbox = Axe:WaitForChild'Blade'
-local FireaxeAccessory = Character.FireaxeAccessory.Handle
-table.insert(Aligns, { FireaxeAccessory, Axe.Handle, CFrameAngles(0, 0, 90) })
+local MeshPartAccessory = Character.MeshPartAccessory.Handle
+table.insert(Aligns, { MeshPartAccessory, Axe.Handle, CFrameAngles(0, 0, 90) })
 
 Axe.Handle.Transparency = 1
 Axe.Blade.Transparency = 1
