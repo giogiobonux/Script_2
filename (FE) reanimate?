@@ -23,7 +23,7 @@ local ComeAndGo = "ComeAndGo.mp3"
 local iNSaNiTY = "Insanity_Eng.mp3"
 local Glitchyy = "GlitchLC.mp3"
 if not isfile(LCv2) then
-    writefile(LCv2, game:HttpGet("https://download843.mediafire.com/t3em14z8rldgoA6knvjshFJMi-DISOBu-unpOL9-RPxA0f7TOIyJ-R752pnQX3yJ93oOVs_AD4ljjQR4sB3UYTv0GgKeOo2VQzKw5hxYHpMdJngf9TQFro8fC9t_2-yyf6EEIWvIMctrWK7oENa3fYV-juBa_yvCf8rHnsRyX5FA/h7oh8xte2zilz76/thats-what-i-spy-mashup.mp3"))
+    writefile(LCv2, game:HttpGet("https://drive.google.com/uc?export=download&id=14ka5n9gSw-Yz3FL-wFavRbnOQhWxY9qQeOo2VQzKw5hxYHpMdJngf9TQFro8fC9t_2-yyf6EEIWvIMctrWK7oENa3fYV-juBa_yvCf8rHnsRyX5FA/h7oh8xte2zilz76/thats-what-i-spy-mashup.mp3"))
 elseif not isfile(ComeAndGo) then
     writefile(ComeAndGo, game:HttpGet("https://drive.google.com/uc?export=download&id=1svwaG8koPgjk_ExW4Ve1ArBScGA75xyY"))
 elseif not isfile(iNSaNiTY) then
